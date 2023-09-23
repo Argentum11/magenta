@@ -33,9 +33,9 @@ following command.
 ```bash
 # To use images in style_images and content_images directories.
 $ cd /path/to/arbitrary_image_stylization
-$ arbitrary_image_stylization_with_weights \
-  --checkpoint=/path/to/arbitrary_style_transfer/model.ckpt \
-  --output_dir=/path/to/output_dir \
+$ python arbitrary_image_stylization_with_weights.py \
+  --checkpoint=checkpoint/model.ckpt \
+  --output_dir=result/ \
   --style_images_paths=images/style_images/*.jpg \
   --content_images_paths=images/content_images/*.jpg \
   --image_size=256 \
