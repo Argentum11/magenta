@@ -114,13 +114,13 @@ def main(unused_argv=None):
       content_img_name = os.path.basename(content_img_path)[:-4]
 
       # Saves preprocessed content image.
-      inp_img_croped_resized_np = sess.run(
-          content_img_preprocessed, feed_dict={
-              content_img_ph: content_img_np
-          })
-      image_utils.save_np_image(inp_img_croped_resized_np,
-                                os.path.join(FLAGS.output_dir,
-                                             '%s.jpg' % (content_img_name)))
+      # inp_img_croped_resized_np = sess.run(
+      #     content_img_preprocessed, feed_dict={
+      #         content_img_ph: content_img_np
+      #     })
+      # image_utils.save_np_image(inp_img_croped_resized_np,
+      #                           os.path.join(FLAGS.output_dir,
+      #                                        '%s.jpg' % (content_img_name)))
 
       # Computes bottleneck features of the style prediction network for the
       # identity transform.
@@ -140,13 +140,13 @@ def main(unused_argv=None):
                            style_img_name))
 
         # Saves preprocessed style image.
-        style_img_croped_resized_np = sess.run(
-            style_img_preprocessed, feed_dict={
-                style_img_ph: style_image_np
-            })
-        image_utils.save_np_image(style_img_croped_resized_np,
-                                  os.path.join(FLAGS.output_dir,
-                                               '%s.jpg' % (style_img_name)))
+        # style_img_croped_resized_np = sess.run(
+        #     style_img_preprocessed, feed_dict={
+        #         style_img_ph: style_image_np
+        #     })
+        # image_utils.save_np_image(style_img_croped_resized_np,
+        #                           os.path.join(FLAGS.output_dir,
+        #                                        '%s.jpg' % (style_img_name)))
 
         # Computes bottleneck features of the style prediction network for the
         # given style image.
