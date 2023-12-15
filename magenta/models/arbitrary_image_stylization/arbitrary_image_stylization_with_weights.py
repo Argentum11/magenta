@@ -169,8 +169,8 @@ def main(unused_argv=None):
           # Saves stylized image.
           image_utils.save_np_image(
               stylized_image_res,
-              os.path.join(FLAGS.output_dir, '%s_stylized_%s_%d.jpg' %
-                           (content_img_name, style_img_name, interp_i)))
+              os.path.join(FLAGS.output_dir, '%s-%s.png' %
+                           (content_img_name, style_img_name)))
 
 
 def console_entry_point():
